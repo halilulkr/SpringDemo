@@ -1,0 +1,51 @@
+<!doctype html>
+<html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link th:href="@{/css/style.css}" rel="stylesheet" >
+</head>
+<body>
+
+<!--Codes start-->
+
+<div class="text-center">
+    <p th:text="#{form}" class="text-center display-4" style="color: plum"></p>
+    <main class="form-register">
+        <form th:method="post" th:action="@{/register}" th:object="${key_form}" >
+            <div class="container">
+                <div class="row">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="firstName" formControlName="firstName" placeholder="Ad" id="firstName">
+                        <div class="alert alert-danger" th:if="${#fields.hasErrors('firstName')}">
+                            <p  th:errors="*{firstName}"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="lastName" formControlName="lastName" placeholder="Soyad" id="lastName">
+                        <div class="alert alert-danger" th:if="${#fields.hasErrors('lastName')}">
+                            <p  th:errors="*{lastName}"></p>
+                        </div>
+                    </div>
+                    <div  class="col-md-2"></div>
+                    <input type="submit" class="w-100 btn btn-lg btn-success" value="Kaydet" >
+                </div>
+            </div>
+        </form>
+    </main>
+</div>
+
+<!--Codes end-->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body {
+    height: 100%;
+}
+body {
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #3562d7;
+}
+.form-register {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-register .form-floating:focus-within {
+    z-index: 2;
+}
+#firstName{
+    margin-bottom: 5px;
+    padding-right: 150px;
+
+}
+#lastName {
+    margin-bottom: 5px;
+    padding-right: 150px;
+
+}
